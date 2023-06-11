@@ -1,2 +1,2 @@
 # Web-Technologies-Lab-Experiments
-These are the lab experiments done by me as a part of my currculum.
+These are the Lab Experiments performed by me in our WEB TECHNOLOGIES LAB as part of our curriculum.
