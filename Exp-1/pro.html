@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant Bill Generator</title>
+	<link rel="stylesheet" type="text/css" href="bill.css">
+</head>
+<body>
+    <center><h1 id="heading">RESTAURANT BILL GENERATOR</h1>
+<div class="maindiv">
+	<div class="container">
+		<h1 class="item">ITEM SELECTOR</h1>
+		<form id="order-form">
+			<label for="appetizers">Appetizers:</label>
+			<select id="appetizers" name="appetizers">
+				<option value="0">None</option>
+				<option value="Mozzarella Sticks">Mozzarella Sticks</option>
+				<option value="Fried Calamari">Fried Calamari</option>
+				<option value="Garlic Bread">Garlic Bread</option>
+			</select>
+
+            <label for="aq">Quantity:</label>
+            <input type="text" id="aq" name="aq">
+            
+			<label for="entrees">Entrees:</label>
+			<select id="entrees" name="entrees">
+				<option value="0">None</option>
+				<option value="Spaghetti and Meatballs">Spaghetti</option>
+				<option value="Chicken Alfredo">Chicken Alfredo</option>
+				<option value="Steak and Fries">Steak and Fries</option>
+			</select>
+
+            <label for="en">Quantity:</label>
+            <input type="text" id="en" name="en">
+
+			<label for="drinks">Drinks:</label>
+			<select id="drinks" name="drinks">
+				<option value="0">None</option>
+				<option value="Soda">Soda</option>
+				<option value="Coco - Cola (with ice)">Coco - Cola (with ice)</option>
+				<option value="Wine">Wine</option>
+			</select>
+
+            <label for="dr">Quantity:</label>
+            <input type="text" id="dr" name="dr">
+
+            <label for="icecream">Ice-Cream:</label>
+			<select id="icecream" name="icecream">
+				<option value="0">None</option>
+				<option value="Chocolate-chips">Chocolate-chips</option>
+				<option value="Blueberry">Blueberry</option>
+				<option value="Strawberry">Strawberry</option>
+			</select>
+
+            <label for="ic">Quantity:</label>
+            <input type="text" id="ic" name="ic">
+
+            <label for="tiffins">Tiffins:</label>
+			<select id="tiffins" name="tiffins">
+				<option value="0">None</option>
+				<option value="Ghee - Idly">Ghee - Idly</option>
+				<option value="Sambar Vada">Sambar Vada</option>
+				<option value="Masala Dosa">Masala Dosa</option>
+			</select>
+
+            <label for="ti">Quantity:</label>
+            <input type="text" id="ti" name="ti">
+
+
+		<label for="biryanis">Biryanis:</label>
+			<select id="biryanis" name="biryanis">
+				<option value="0">None</option>
+				<option value="Panner Biryani">Panner Biryani</option>
+				<option value="Chicken Biryani">Chicken Biryani</option>
+				<option value="Ulavacahru Biryani">Ulavacahru Biryani</option>
+			</select>
+
+            <label for="bi">Quantity:</label>
+            <input type="text" id="bi" name="bi">
+
+        </div>
+        <div id="quantity-container">
+            <h1 class="order">YOUR ORDER</h1>
+            <p><span id="apval"></span></p>
+            <p><span id="enval"></span></p>
+            <p><span id="drval"></span></p>
+            <p><span id="icval"></span></p>
+            <p><span id="tival"></span></p>
+            <p><span id="bival"></span></p>
+		</div>
+    </div>
+        <button>
+            <span class="transition"></span>
+            <span class="label">GENERATE BILL</span>
+          </button>
+		  <button type="reset" onclick="emptyCart()" id="r">
+            <span class="transition"></span>
+            <span class="label">EMPTY CART</span>
+          </button>
+    </form>
+    <div id="total-container">
+        <h1 id="bill">BILL : <span id="total"></span>
+    </div>
+    
+    <script src="bill.js"></script>
+    
+</body>
+</html>

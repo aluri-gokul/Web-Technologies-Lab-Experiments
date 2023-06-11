@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SIGN UP</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<h2>SIGN UP</h2>
+	<div class="form">
+		<form name="order-form" id="order-form" action="connect.php" method="post">
+			<label>Name</label>
+			<input type="text" placeholder="Enter your name" required name="name">
+
+            <label>Phone number</label>
+			<input type="text" placeholder="Enter your moblie no." required maxlength="10" name="phonenumber">
+
+			<label>Email</label>
+			<input type="email" placeholder="Enter your email" required name="email">
+
+			<label>Password</label>
+			<input type="password" placeholder="Enter your password" required name="password">
+
+			<div class="bu">
+				<button type="submit" name="sub">REGISTER</button>
+				<button type="reset" name="res">RESET</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bill Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      width: 80%;
+    }
+    
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #eee;
+    }
+    
+    tfoot td {
+      font-weight: bold;
+    }
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #0062cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bill Page</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody id="bill-items">
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Total</td>
+        <td id="bill-total"></td>
+      </tr>
+    </tfoot>
+  </table>
+  
+  <script>
+    // Get the cart items from local storage or create an empty array if it doesn't exist
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [] ;
+    
+    // Display the items in the cart on the bill page
+    const billList = document.getElementById("bill-items");
+    let billTotal = 0;
+    cartItems.forEach(item => {
+      if (item.quantity > 0) { // Show items only if quantity > 0
+        const tr = document.createElement("tr");
+        const itemNameTd = document.createElement("td");
+        itemNameTd.textContent = item.name;
+        tr.appendChild(itemNameTd);
+        
+        const itemPriceTd = document.createElement("td");
+        itemPriceTd.textContent = `$${item.price}`;
+        tr.appendChild(itemPriceTd);
+        
+        const itemQuantityTd = document.createElement("td");
+        itemQuantityTd.textContent = item.quantity;
+        tr.appendChild(itemQuantityTd);
+        
+        const itemTotalPriceTd = document.createElement("td");
+        itemTotalPriceTd.textContent = `$${item.price * item.quantity}`;
+        tr.appendChild(itemTotalPriceTd);
+        
+        billList.appendChild(tr);
+        billTotal += item.price * item.quantity;
+      }
+    });
+    
+    // Display the total price on the bill page
+    document.getElementById("bill-total").textContent = `$${billTotal}`;
+  </script>
+  <form action="/logout" method="POST">
+    <center><button>LOGOUT</button></center>
+  </form>
+</body>
+</html>

@@ -1,0 +1,123 @@
+.maindiv{
+    display:flex;
+    justify-content: center;
+}
+
+
+.item, .order{
+    color:black;
+}
+#heading {
+    background-color: azure;
+    font-size: 36px;
+    padding:2px;
+}
+#bill{
+    background-color:azure;
+    font-size: 36px;
+    color:red;
+}
+#quantity-container{
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: lightgoldenrodyellow;
+    height: 350px;
+    border-style: dashed;
+    text-align: justify;
+}
+#aq,#en,#dr,#de,#ic,#ti,#bi{
+    width:75px;
+    height:13px;
+}
+body{
+    background-color: grey;
+}
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: lightgoldenrodyellow;
+    border-style:double;
+    border-width:4px;
+}
+
+h1 {
+    text-align: center;
+    color:darkblue;
+    font-size: 36px;
+}
+
+form {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+label {
+    display:flexbox;
+    margin-bottom: 10px;
+}
+
+select{
+    margin-bottom: 20px;
+}
+
+#r{
+    margin-left:55px;
+}
+
+button {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 17px;
+    padding: 0.5em 2.3em;
+    font-weight: 500;
+    background: aquamarine;
+    color: black;
+    border: none;
+    overflow: hidden;
+    border-radius: 0.6em;
+    margin-top: 10px;
+    border-style: double;
+    margin-left:65px;
+    margin-top:25px;
+   }
+   
+   .label {
+    position: relative;
+    top: -1px;
+    font-size:large;
+    font-weight: bold;
+   }
+   
+   .transition {
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+    
+    border-radius: 9999px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   }
+   
+   button:hover .transition {
+    width: 14em;
+    height: 14em;
+   }
+   
+   button:active {
+    transform: scale(0.97);
+   }
+
+#total-container {
+    text-align: center;
+    
+}
+
+#total {
+    font-weight: bold;
+    font-size:36px;
+}
